@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     background: var(--Light-grayish-blue);
 }
-header{
+#header{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
