@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goods</title>
 
-    <link rel="stylesheet" href="./components/styles/reset.css">
-    <link rel="stylesheet" href="./components/styles/main.css">
-    <link rel="stylesheet" href="./components/styles/cards.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/cards.css">
+    <link rel="stylesheet" href="./styles/chatbot.css">
 </head>
 <body>
     <!-- <nav>
@@ -19,7 +20,7 @@
         </header>
         <div class="card-items">
             <div class="card">
-                <img src="./public/icons/heart.svg" alt="" class="fav">
+                <img src="./public/icons/heart.svg" alt="" data-active="false" class="fav">
                 <div class="typo">0 - 0 - 24</div>
                 <div class="media">
                     <img src="./public/items/1.webp" alt="product">
@@ -37,7 +38,7 @@
 
 
             <div class="card">
-                <img src="./public/icons/heart.svg" alt="" class="fav">
+                <img src="./public/icons/heart.svg" alt="" data-active="false" class="fav">
                 <div class="typo">0 - 0 - 24</div>
                 <div class="media">
                     <img src="./public/items/2.webp" alt="product">
@@ -53,7 +54,7 @@
             </div>
 
             <div class="card">
-                <img src="./public/icons/heart.svg" alt="" class="fav">
+                <img src="./public/icons/heart.svg" alt="" data-active="false" class="fav">
                 <div class="typo">0 - 0 - 24</div>
                 <div class="media">
                     <img src="./public/items/3.webp" alt="product">
@@ -69,7 +70,7 @@
             </div>
 
             <div class="card">
-                <img src="./public/icons/heart.svg" alt="" class="fav">
+                <img src="./public/icons/heart.svg" alt="" data-active="false" class="fav">
                 <div class="typo">0 - 0 - 24</div>
                 <div class="media">
                     <img src="./public/items/4.webp" alt="product">
@@ -95,8 +96,10 @@
                         let src = fav.getAttribute("src");
                         if (src === "./public/icons/heart.svg") {
                             fav.setAttribute("src", "./public/icons/heart-fill.svg");
+                            fav.dataset.active = "true";
                         } else {
                             fav.setAttribute("src", "./public/icons/heart.svg");
+                            fav.dataset.active = "false";
                         }
                     });
                 });
@@ -107,5 +110,34 @@
     <!-- <footer>
 
     </footer> -->
+
+
+    <div id="show-chatbot" class="">
+        <div class="chatbot-button">
+            <img class="filters" src="./public/icons/chat-d.svg" alt="chat">
+            <img class="filters" src="./public/icons/close.svg" alt="close">
+        </div>
+        <div class="chatbot">
+            <div class="header">
+                <h3>Assistant</h3>
+                <img class="filters" src="./public/icons/close.svg" alt="close">
+            </div>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <img src="./public/icons/assistant.jpeg" alt="assistant" class="assistant">
+                    <p>Привет, как я могу помочь?</p>
+                </li>
+                <!-- <li class="chat outgoing">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li> -->
+            </ul>
+            <div class="chat-input">
+                <textarea name="" id="" placeholder="Talk with me..." required></textarea>
+                <img class="send-btn filters-1" src="./public/icons/send.svg" alt="send">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/chatbot.js"></script>
 </body>
 </html>

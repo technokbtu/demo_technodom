@@ -20,10 +20,12 @@ header {
 
 .card {
     position: relative;
+    cursor: pointer;
     padding: 20px 30px;
     background-color: #fff;
     border-radius: 10px;
 }
+
 
 
 .fav {
@@ -49,7 +51,8 @@ header {
 
 .media {
     text-align: center;
-    padding-top: 35px;
+    padding-top: 30px;
+    transition: .3s ease-in-out;
 }
 
 .media img {
@@ -57,9 +60,13 @@ header {
     height: 70%;
 }
 
+.media:hover {
+    transform: scale(1.1);
+}
+
 .title {
     font-size: var(--fsp);
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 15px;
     line-height: 22px;
 }
