@@ -1,0 +1,138 @@
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+:root{
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: var(--Light-grayish-blue);
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background: white;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    position: fixed;
+}
+.tabs{
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--Dark-grayish-blue);
+    font-size: 1rem;
+    
+}
+.tabs div{
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logo{
+
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
+}
+.search{
+    background: var(--Orange);
+    height: 3rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color:white;
+    margin-right: 1rem;
+}
+.search a{
+    color: white;
+    font-weight: 600;
+}
+.tabs{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stroka{
+    width: 80%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stroka input{
+    height: 3rem;
+    width: 60%;
+    border-radius:0.5rem;
+    border:1px solid var(--Dark-grayish-blue);
+    transition: 0.3s;
+    padding-left: 1rem;
+}
+.fa-search{
+    color:var(--Grayish-blue);
+}
+.fa-search:hover{
+    color:var(--Dark-grayish-blue);
+}
+.stroka input:hover{
+    border:1px solid var(--Orange);
+}
+.stroka button{
+    border: none;
+    height: 3rem;
+    color:var(--White);
+    background: none;
+    position: absolute;
+    right:41%;
+}
+.icons{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1rem;
+    width: 40%;
+    margin-top: 1rem;
+}
+.icons div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.1rem;
+}
+
+.icons div:hover{
+    color: var(--Orange);
+}
+
+.icon{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 3rem;
+    margin: 1rem;
+
+}
+
