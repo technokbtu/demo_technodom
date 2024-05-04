@@ -29,6 +29,5 @@ response_data = get_response(search_term)
 for item in response_data["products"]:
     print(item["name"])
     
-"some shit"
-"lol"
-"fvvfvfv"
+
+"fvvfvfvvvv"
