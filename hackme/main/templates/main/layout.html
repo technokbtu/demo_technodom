@@ -12,7 +12,7 @@
     <link rel="stylesheet" href = "{% static 'main/css/chatbot.css' %}">
     <link rel="stylesheet" href = "{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href = "{% static 'main/css/reset.css' %}">
-    
+
     {% block styles %}
             
     {% endblock %}
@@ -31,7 +31,10 @@
                         <i class="fa fa-search fa-xl" aria-hidden="true"></i>
                     </button>
                 </div>
-                <input type="text" placeholder="">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" placeholder="">
+                </form>
             </div>
             
             <div class="icons">                
@@ -108,11 +111,11 @@
             favs.forEach(function(fav) {
                 fav.addEventListener("click", function() {
                     let src = fav.getAttribute("src");
-                    if (src === "./public/icons/heart.svg") {
-                        fav.setAttribute("src", "./public/icons/heart-fill.svg");
+                    if (src === "{% static 'main/public/icons/heart.svg' %}") {
+                        fav.setAttribute("src", "{% static 'main/public/icons/heart-fill.svg' %}");
                         fav.dataset.active = "true";
                     } else {
-                        fav.setAttribute("src", "./public/icons/heart.svg");
+                        fav.setAttribute("src", "{% static 'main/public/icons/heart.svg' %}");
                         fav.dataset.active = "false";
                     }
                 });
@@ -128,17 +131,17 @@
 
 <div id="show-chatbot" class="">
     <div class="chatbot-button">
-        <img class="filters" src="https://icon-icons.com/icons2/4036/PNG/512/conversation_chatting_talking_bubble_speech_icon_256494.png" alt="chat">
+        <img class="filters" src="{% static 'main/public/icons/chat-d.svg' %}" alt="chat">
         <img class="filters" src="{% static 'main/public/icons/close.svg' %}" alt="close">
     </div>
     <div class="chatbot">
         <div class="header">
             <h3>Assistant</h3>
-            <img class="filters" src="https://icons8.com/icon/37410/bot" alt="close">
+            <img class="filters" src="{% static 'main/public/icons/heart-fill.svg' %}" alt="close">
         </div>
         <ul class="chatbox">
             <li class="chat incoming">
-                <img src="https://icons8.com/icon/37410/bot" alt="assistant" class="assistant">
+                <img src="{% static 'main/public/icons/assistant.jpeg' %}" alt="assistant" class="assistant">
                 <p>Привет, как я могу помочь?</p>
             </li>
             <!-- <li class="chat outgoing">
@@ -147,7 +150,7 @@
         </ul>
         <div class="chat-input">
             <textarea name="" id="" placeholder="Talk with me..." required></textarea>
-            <img class="send-btn filters-1" src="https://icons8.com/icon/37410/bot" alt="send">
+            <img class="send-btn filters-1" src="{% static 'main/public/icons/send.svg' %}" alt="send">
         </div>
     </div>
 </div>

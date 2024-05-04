@@ -25,9 +25,25 @@ def get_response(search_term):
 # Example usage
 search_term = "samsung"  # Example search term
 response_data = get_response(search_term)
-print(response_data)
+data = []
 for item in response_data["products"]:
-    print(item["name"], item["price_formatted"], item["image_url"])
+    prod = {
+        "name": None,
+        "price": None,
+        "image": None,
+        "plan": None
+    }
+    prod["name"] = item["name"]
+    prod["price"] = item["price_formatted"]
+    prod["image"] = item["image_url"]
     
-
-"fvvfvfvvvv"
+    for i in item["params"]:
+        if i["key"] == "Рассрочка":
+            prod["plan"] = i["values"][0]
+            break
+        
+    data.append(prod)
+            
+for i in data:
+    print(i, "\n\n\n")
+    
