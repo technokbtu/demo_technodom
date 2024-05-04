@@ -25,9 +25,9 @@ def get_response(search_term):
 # Example usage
 search_term = "samsung"  # Example search term
 response_data = get_response(search_term)
-
+print(response_data)
 for item in response_data["products"]:
-    print(item["name"])
+    print(item["name"], item["price_formatted"], item["image_url"])
     
 
 "fvvfvfvvvv"
