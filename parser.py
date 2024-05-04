@@ -30,3 +30,4 @@ for item in response_data["products"]:
     print(item["name"])
     
 "some shit"
+"lol"
