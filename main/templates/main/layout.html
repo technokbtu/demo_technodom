@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href = "{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href = "{% static 'main/css/cards.css' %}">
+    <link rel="stylesheet" href = "{% static 'main/css/chatbot.css' %}">
+    <link rel="stylesheet" href = "{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href = "{% static 'main/css/reset.css' %}">
+
+    {% block styles %}
+            
+    {% endblock %}
+    <script src="https://kit.fontawesome.com/21a26e4119.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header id="header">
+        
+        <div class="tabs">
+            <div class="logo">Retake Enjoyers</div>
+            <div class = "stroka">
+                <div class = "search">
+                    <a href="./catalog.html">Каталог</a>
+                    <button>
+                        <i class="fa fa-search fa-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" placeholder="">
+                </form>
+            </div>
+            
+            <div class="icons">                
+                <div>
+                    <i  id="icon" class="fa fa-heart-o fa-xl" aria-hidden="true"></i>
+                    <h6 id="icon">Избранное</h6>
+                </div>               
+                <div>
+                    <i id="icon" class="fa fa-shopping-cart fa-xl" aria-hidden="true"></i>  
+                    <h6 id="icon">Корзина</h6> 
+                </div>          
+                <div>
+                    <i id="icon" class="fa fa-user fa-xl" aria-hidden="true"></i>
+
+                    <h6 id="icon">Вход</h6>  
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+    <div class="lower-header">
+        <a href = "#slider" class="knopka">Home</a>
+        <a href = "#benef" class="knopka">About us</a>
+        <a href = "#beneftwo" class="knopka">Contacts</a>
+        <div class="knopka">LIVE</div>
+        <div class="knopka">Кондиционеры</div>
+        <div class="knopka">Подарочные карты</div>
+    </div>
+    
+    {% block content %}
+            
+    {% endblock %}
+    
+    <!--<div id="slider" class="sliders">
+        <div class="slider left">
+            <img src="./images/techno.jpg" alt="">
+        </div>
+        <div class="slider right">
+            <div class="top">
+                <h2>-13%</h2>
+                <i class="fa fa-heart-o fa-xl" aria-hidden="true"></i>
+            </div>
+            <img src="./images/tamir.jpg" alt="">
+            <div class="text">
+                <p>Говнодуй Модель HUY2281337(+комплект грязных носков)</p>
+                <h6>150000тг</h6>
+            </div>
+            <button>В корзину</button>
+        </div>
+    </div>
+    
+    <div id="benef" class="benefits human">
+        <img src="./images/armyan.jpg" alt="">
+        <div class="text">
+            <h1>About us</h1>
+            <p>Alikhan Makhmutov(CEO of mewing)</p>
+            <p>Tamirlan Kustanayev(Startapp 3 noutbuka)</p>
+            <p>Erasyl</p>
+            <p>Ernurs</p>
+        </div>
+    </div>
+    <div id="beneftwo" class="benefits dog">
+        <img src="./images/dog.jpg" alt="">
+        <div class="text">
+            <h1>Contacts</h1>
+            <p></p>
+        </div>
+    </div> -->
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let favs = document.querySelectorAll(".fav");
+            favs.forEach(function(fav) {
+                fav.addEventListener("click", function() {
+                    let src = fav.getAttribute("src");
+                    if (src === "{% static 'main/public/icons/heart.svg' %}") {
+                        fav.setAttribute("src", "{% static 'main/public/icons/heart-fill.svg' %}");
+                        fav.dataset.active = "true";
+                    } else {
+                        fav.setAttribute("src", "{% static 'main/public/icons/heart.svg' %}");
+                        fav.dataset.active = "false";
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+
+<!-- <footer>
+
+</footer> -->
+
+
+<div id="show-chatbot" class="">
+    <div class="chatbot-button">
+        <img class="filters" src="{% static 'main/public/icons/chat-d.svg' %}" alt="chat">
+        <img class="filters" src="{% static 'main/public/icons/close.svg' %}" alt="close">
+    </div>
+    <div class="chatbot">
+        <div class="header">
+            <h3>Assistant</h3>
+            <img class="filters" src="{% static 'main/public/icons/heart-fill.svg' %}" alt="close">
+        </div>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <img src="{% static 'main/public/icons/assistant.jpeg' %}" alt="assistant" class="assistant">
+                <p>Привет, как я могу помочь?</p>
+            </li>
+            <!-- <li class="chat outgoing">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li> -->
+        </ul>
+        <div class="chat-input">
+            <textarea name="" id="" placeholder="Talk with me..." required></textarea>
+            <img class="send-btn filters-1" src="{% static 'main/public/icons/send.svg' %}" alt="send">
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'main/js/chatbot.js' %}"></script>
+</body>
+</html>

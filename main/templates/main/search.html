@@ -1,0 +1,39 @@
+{% extends "main/layout.html" %}
+
+{% load static %}
+
+    {% block title %}search{% endblock  %}
+
+    {% block content %}
+
+        <div class="results">
+            
+            <h1><b>Результаты по запросу: {{ topic }}</b></h1>
+        </div>
+
+        <div class="card-items">
+            {% for el in products %}
+                <div class="card">
+                    <img src="{% static 'main/public/icons/heart.svg' %}" alt="" data-active="false" class="fav">
+                    <div class="typo">{{ el.plan }}</div>
+                    <div class="media">
+                        <img src="{{ el.image }}" alt="product">
+                    </div>
+                    <h5 class="title"> {{ el.name }}</h5>
+                    <div class="rating">
+                        <div class="star"><img src="{% static 'main/public/icons/star.svg' %}" alt=""> 5 </div>
+                        <div class="grey reviews">(19 отзывов)</div>
+                    </div>
+                    <p class="price">{{ el.price }} ₸</p>
+                    <div class="ras"><p>2313 x 12 мес</p></div>
+                    <div class="buy">В корзину </div>
+                </div>
+            {% endfor %}
+    {% endblock %}
+
+    <!-- <footer>
+
+    </footer> -->
+
+</body>
+</html>
