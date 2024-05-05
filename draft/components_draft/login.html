@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="./styles/header.css">
     <script src="https://kit.fontawesome.com/21a26e4119.js" crossorigin="anonymous"></script>
-    <script src="{% static './js/burger.js' %}"></script>
+    <script src="./js/burger.js"></script>
 </head>
 <body>
     <header id="header">
@@ -34,17 +34,17 @@
         
     </header>
     <div class="burger-menu">
-        <i class="fa fa-bars" aria-hidden="true" style="font-size: 24px;"></i>
+        <i id = "bar" class="fa fa-bars" aria-hidden="true" style="font-size: 24px;"></i>
 
     </div>
     <div class="burger-info">
         <div class="burger-tabs">
             
             <div class="burger-tab">
-                <h6 id="icon">Личный кабинет</h6> 
+                <p id="icon">Личный кабинет</p> 
             </div> 
             <div class="burger-tab">
-                <h6 id="icon">Очередь</h6> 
+                <p id="icon">Очередь</p> 
             </div>                       
             <div class="burger-tab">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -52,7 +52,7 @@
             </div>          
             <div class="burger-tab">
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
-                <h6 id="icon">Вход</h6>  
+                <a href = "login.html" id="icon">Вход</a>   
             </div>
         </div>
     </div>

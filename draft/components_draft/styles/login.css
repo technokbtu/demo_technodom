@@ -20,7 +20,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        background: VAR(--Light-grayish-blue);
+        background: var(--Light-grayish-blue);
 }
 .login-box,.login-forms{
         display: flex;
@@ -83,7 +83,7 @@ body{
     
     }
     .burger-info{
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         position: absolute;
@@ -103,11 +103,17 @@ body{
         padding: 0.5rem;
         height: 35%;
     }
+    .burger-tab{
+        transition: 0.3s;
+        padding: 0.5rem;
+    }
+    .burger-tab:hover{
+        background: var(--Light-grayish-blue);
+    }
     .burger-menu{
         display: block;
         position: absolute;
         left: 1rem;
         top:1rem;
-        background: red;
     }
 }
