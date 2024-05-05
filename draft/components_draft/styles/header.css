@@ -31,7 +31,7 @@ body{
     border-bottom: 1px solid var(--Light-grayish-blue);
     position: fixed;
     top:0;
- 
+    border-bottom: 1px solid #000;
 }
 .tabs{
     display: flex;
@@ -85,6 +85,5 @@ a{
 @media(min-width:650px){
     .tabs{
         align-self: center;
-     
     }
 }
