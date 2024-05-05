@@ -27,8 +27,7 @@ lis.forEach(li => {
                 </div>
 
                 <div class="queue">
-                    ${you}
-                    <h3>Номер: 4</h3>
+                    <h3 class="you">Номер: 4</h3>
                     <p>Займет времени: ≈5 мин.</p>
                 </div>
 
