@@ -77,3 +77,14 @@ a{
         display: none;
     }
 }
+@media(max-width:650px){
+    #header{
+        display: none;
+    }
+}
+@media(min-width:650px){
+    .tabs{
+        align-self: center;
+     
+    }
+}
