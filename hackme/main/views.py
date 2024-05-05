@@ -24,7 +24,7 @@ def get_response(search_term):
         return f"Bad response {response.status_code}"
 
 # Example usage
-search_term = ""  # Example search term
+search_term = "Apple"  # Example search term
 
 
 def search(request):

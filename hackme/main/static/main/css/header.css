@@ -30,6 +30,7 @@ body{
     height: 5rem;
     border-bottom: 1px solid var(--Light-grayish-blue);
     position: fixed;
+    z-index: 999;
 }
 .tabs{
     display: flex;
@@ -86,6 +87,9 @@ a{
     border:1px solid var(--Dark-grayish-blue);
     transition: 0.3s;
     padding-left: 1rem;
+}
+.form-control{
+    width: 15rem;
 }
 .fa-search{
     color:var(--Grayish-blue);
