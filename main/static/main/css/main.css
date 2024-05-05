@@ -11,22 +11,8 @@
     --btn-color: #2196f3;
     --bg-color: #f0f1f2;
     --error-color: #721c24;
-    --fsh1: 28px;
-    --fsh2: 26px;
-    --fsh3: 22px;
-    --fsh4: 20px;
-    --fsh5: 18px;
-    --fsp: 16px;
     --hover-color: #0288d1;
 }
-
-
-/* .container {
-    width: 1080px;
-    margin: 0 auto;
-
-} */
-
 
 
 html {
@@ -45,4 +31,51 @@ body {
 
 .filters {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+
+
+@media (min-width: 328px) {
+    :root {
+        --fsh1: 24px;
+        --fsh2: 22px;
+        --fsh3: 20px;
+        --fsh4: 18px;
+        --fsh5: 16px;
+        --fsp: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    :root {
+        --fsh1: 24px;
+        --fsh2: 22px;
+        --fsh3: 20px;
+        --fsh4: 18px;
+        --fsh5: 16px;
+        --fsp: 15px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    :root {
+        --fsh1: 26px;
+        --fsh2: 24px;
+        --fsh3: 22px;
+        --fsh4: 20px;
+        --fsh5: 18px;
+        --fsp: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --fsh1: 28px;
+        --fsh2: 26px;
+        --fsh3: 22px;
+        --fsh4: 20px;
+        --fsh5: 18px;
+        --fsp: 16px;
+    }
 }
